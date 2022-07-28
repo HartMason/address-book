@@ -6,8 +6,10 @@ const AddressDetails = (props) => {
   const [isClicked, setIsClicked] = useState(false);
 
   const clickHandler = () => {
-    setIsClicked(!isClicked);
+    setIsClicked(true);
     console.log(isClicked);
+
+
   };
 
   return (
@@ -15,6 +17,7 @@ const AddressDetails = (props) => {
       <h3>{item.name.first + item.name.last}</h3>
       <img src={item.picture.medium} />
       <button onClick={clickHandler}>DETAILS</button>
+      {isClicked && <div>Hello</div>}
     </li>
   );
 };

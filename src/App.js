@@ -13,6 +13,7 @@ function App() {
     });
   }, []);
 
+
   // const [users, fetchUsers] = useState([])
 
   // const fetchData = () => {
@@ -36,9 +37,9 @@ function App() {
     <div className="App">
       <header>Address Book</header>
       <div>
-        {data.map((item) => {
-          <AddressDetails 
-          key={item.dob.age} 
+        {data.map((item) => {    //1st item or single element, 2nd is the index, third original array(data)
+          return  <AddressDetails 
+          key={item.id.value} 
           item={item} />;
         })}
       </div>
