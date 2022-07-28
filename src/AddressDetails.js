@@ -14,6 +14,7 @@ const clickHandler = () => {
     <div>
     <li>
         <h3>{item.name.first + item.name.last}</h3>
+        <img src={item.picture.medium}/>
     </li>
     <button onClick={clickHandler}>DETAILS</button>
     </div>

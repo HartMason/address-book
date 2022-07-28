@@ -32,13 +32,14 @@ function App() {
   //   console.log(fetchData)
 
   // const {user, fetchUsers} = this.state
-  render();
+  
   return (
     <div className="App">
       <header>Address Book</header>
       <div>
         {data.map((item) => {
           <AddressDetails key={item.login.uuid} item={item} />;
+        console.log(AddressDetails)
         })}
       </div>
       
