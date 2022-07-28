@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>Address Book</header>
+      <header className="header">Address Book</header>
       <div>
         {data.map((item, index) => {    //1st item or single element, 2nd is the index, third original array(data)
           return  <AddressDetails 

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "./addressDetails.css"
+import "./addressDetails.css";
 
 const AddressDetails = (props) => {
   const { item } = props;
+  console.log(item);
 
   const [isClicked, setIsClicked] = useState(false);
 
@@ -12,22 +13,22 @@ const AddressDetails = (props) => {
   };
 
   return (
-    <div >
-    <li className="parentContainer">
-      <h3>{item.name.first + " " + item.name.last}</h3>
-      <img src={item.picture.medium} />
-      {!isClicked ? (
-        <button onClick={clickHandler}>DETAILS</button>
-      ) : (
-        <button onClick={clickHandler}>Hide Details</button>
-      )}
-      {isClicked && (
-        <div>
-          <p>{item.email}</p>
-          <h2>{item.gender}</h2>
-        </div>
-      )}
-    </li>
+    <div>
+      <li className="parentContainer">
+        <h3>{item.name.first + " " + item.name.last}</h3>
+        <img src={item.picture.large} />
+        {!isClicked ? (
+          <button onClick={clickHandler}>DETAILS</button>
+        ) : (
+          <button onClick={clickHandler}>Hide Details</button>
+        )}
+        {isClicked && (
+          <div>
+            <p>{item.email}</p>
+            <p>{item.phone}</p>
+          </div>
+        )}
+      </li>
     </div>
   );
 };
