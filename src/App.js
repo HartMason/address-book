@@ -2,12 +2,14 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import { render } from "@testing-library/react";
 import AddressDetails from "./AddressDetails";
+import Axios from "axios"; 
+
 
 function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://randomuser.me/api?results=25").then((res) => {
+    Axios.get("https://randomuser.me/api?results=25").then((res) => {
       setData(res.data.results);
     });
   }, []);
@@ -39,7 +41,7 @@ function App() {
           <AddressDetails key={item.login.uuid} item={item} />;
         })}
       </div>
-      <ol></ol>
+      
     </div>
   );
 }
