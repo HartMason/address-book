@@ -1,3 +1,13 @@
 .parentContainer {
-  justify-content: center;
+  
+}
+
+.nameImage {
+    display: flex;
+    background-color: beige;
+
+}
+
+h3 {
+  margin-right: 200px; 
 }

@@ -15,8 +15,10 @@ const AddressDetails = (props) => {
   return (
     <div>
       <li className="parentContainer">
+        <div className="nameImage">
         <h3>{item.name.first + " " + item.name.last}</h3>
         <img src={item.picture.large} />
+        </div>
         {!isClicked ? (
           <button onClick={clickHandler}>DETAILS</button>
         ) : (
