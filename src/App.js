@@ -35,14 +35,11 @@ function App() {
     <div className="App">
       <header>Address Book</header>
       <div>
-        {data &&
-          data.map(() => (userData) => {
-            return <div>{userData}</div>;
-          })}
+        {data.map((item) => {
+          <AddressDetails key={item.login.uuid} item={item} />;
+        })}
       </div>
-      <ol>
-        <AddressDetails/>
-      </ol>
+      <ol></ol>
     </div>
   );
 }
