@@ -37,9 +37,9 @@ function App() {
     <div className="App">
       <header>Address Book</header>
       <div>
-        {data.map((item) => {    //1st item or single element, 2nd is the index, third original array(data)
+        {data.map((item, index) => {    //1st item or single element, 2nd is the index, third original array(data)
           return  <AddressDetails 
-          key={item.id.value} 
+          key={index} 
           item={item} />;
         })}
       </div>

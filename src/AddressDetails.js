@@ -6,18 +6,25 @@ const AddressDetails = (props) => {
   const [isClicked, setIsClicked] = useState(false);
 
   const clickHandler = () => {
-    setIsClicked(true);
+    setIsClicked(!isClicked);
     console.log(isClicked);
-
-
   };
 
   return (
     <li>
       <h3>{item.name.first + item.name.last}</h3>
       <img src={item.picture.medium} />
-      <button onClick={clickHandler}>DETAILS</button>
-      {isClicked && <div>Hello</div>}
+      {!isClicked ? (
+        <button onClick={clickHandler}>DETAILS</button>
+      ) : (
+        <button onClick={clickHandler}>Hide Details</button>
+      )}
+      {isClicked && (
+        <div>
+          <p>{item.email}</p>
+          <h2>{item.gender}</h2>
+        </div>
+      )}
     </li>
   );
 };
