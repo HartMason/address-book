@@ -1,24 +1,22 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from "react";
 
 const AddressDetails = (props) => {
-const { item } = props; 
+  const { item } = props;
 
-const [isClicked, setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
-const clickHandler = () => {
-  setIsClicked(!isClicked);
-  console.log(isClicked)
-}
+  const clickHandler = () => {
+    setIsClicked(!isClicked);
+    console.log(isClicked);
+  };
 
   return (
-    <div>
     <li>
-        <h3>{item.name.first + item.name.last}</h3>
-        <img src={item.picture.medium}/>
+      <h3>{item.name.first + item.name.last}</h3>
+      <img src={item.picture.medium} />
+      <button onClick={clickHandler}>DETAILS</button>
     </li>
-    <button onClick={clickHandler}>DETAILS</button>
-    </div>
-  )
-}
+  );
+};
 
-export default AddressDetails
+export default AddressDetails;

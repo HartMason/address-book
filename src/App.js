@@ -2,8 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import { render } from "@testing-library/react";
 import AddressDetails from "./AddressDetails";
-import Axios from "axios"; 
-
+import Axios from "axios";
 
 function App() {
   const [data, setData] = useState([]);
@@ -32,17 +31,17 @@ function App() {
   //   console.log(fetchData)
 
   // const {user, fetchUsers} = this.state
-  
+
   return (
     <div className="App">
       <header>Address Book</header>
       <div>
         {data.map((item) => {
-          <AddressDetails key={item.login.uuid} item={item} />;
-        console.log(AddressDetails)
+          <AddressDetails 
+          key={item.dob.age} 
+          item={item} />;
         })}
       </div>
-      
     </div>
   );
 }
