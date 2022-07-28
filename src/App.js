@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import { render } from "@testing-library/react";
+import AddressDetails from "./AddressDetails";
 
 function App() {
   const [data, setData] = useState([]);
@@ -39,7 +40,9 @@ function App() {
             return <div>{userData}</div>;
           })}
       </div>
-      <ol></ol>
+      <ol>
+        <AddressDetails/>
+      </ol>
     </div>
   );
 }
