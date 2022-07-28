@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./addressDetails.css"
 
 const AddressDetails = (props) => {
   const { item } = props;
@@ -11,8 +12,9 @@ const AddressDetails = (props) => {
   };
 
   return (
-    <li>
-      <h3>{item.name.first + item.name.last}</h3>
+    <div >
+    <li className="parentContainer">
+      <h3>{item.name.first + " " + item.name.last}</h3>
       <img src={item.picture.medium} />
       {!isClicked ? (
         <button onClick={clickHandler}>DETAILS</button>
@@ -26,6 +28,7 @@ const AddressDetails = (props) => {
         </div>
       )}
     </li>
+    </div>
   );
 };
 
