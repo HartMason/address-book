@@ -33,8 +33,8 @@ function App() {
 
   return (
     <div className="App">
-      <header className="header">Address Book</header>
       <div>
+      <header className="header">Address Book</header>
         {data.map((item, index) => {
           //1st item or single element, 2nd is the index, third original array(data)
           return <AddressDetails key={index} item={item} />;
